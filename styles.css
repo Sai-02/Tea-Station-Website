@@ -10,12 +10,13 @@
   --verystylish: "Pacifico", cursive;
   --stylishfont: "Zhi Mang Xing", cursive;
   --boldfont: "Lato", sans-serif;
-  --greycolor:rgba(88, 86, 88, 0.5);
+  --greycolor: rgba(88, 86, 88, 0.5);
+  --mainTransition: transition 0.3s ease-in-out;
 }
 .main {
-  background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
-   url("main-bcg.jpeg") no-repeat;
-  
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("main-bcg.jpeg") no-repeat;
+
   width: 100vw;
   background-size: cover;
   min-height: 100vh;
@@ -28,11 +29,14 @@
   padding-top: 17em;
   padding-bottom: 2em;
   letter-spacing: 3px;
+  animation: slideFromRight 5s ease-in-out;
 }
 .header-line {
   font-family: var(--boldfont);
   color: var(--primarycolor);
   letter-spacing: 6px;
+  animation: slideFromLeft 5s ease-in-out;
+  margin-bottom: 20px;
 }
 .main-button {
   background: var(--greencolor);
@@ -44,14 +48,88 @@
   padding-bottom: 10px;
   text-decoration: var(--greycolor);
   letter-spacing: 3px;
-  text-transform:uppercase;
-  outline:0.2rem solid var(--greencolor);
-  border:0;
-  
+  text-transform: uppercase;
+  outline: 0.2rem solid var(--greencolor);
+  border: 0;
+
   outline-offset: 4px;
   cursor: pointer;
-
-
+  animation: show 5s ease-in-out 1;
 }
 
-  
+.main-button:hover {
+  color: var(--primarycolor);
+  opacity: 0.7;
+}
+/*Check some error in  animation*/
+@keyframes show {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+  }
+
+  50% {
+    transform: translateX(-200px);
+  }
+
+  75% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  50% {
+    transform: translateX(200px);
+  }
+
+  75% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.content-divider {
+  height: 0.5rem;
+  background: linear-gradient(
+    to left,
+    var(--primarycolor),
+    var(--greencolor),
+    var(--primarycolor),
+    rgba(230, 45, 23)
+  );
+}
+
+.skill {
+  display: inline;
+  background: var(--greycolor);
+}
+
+.skill-content {
+  padding: 2.5rem 0;
+  text-align: center;
+  transition: var(--mainTransition);
+}
+.skill-content:hover {
+}
