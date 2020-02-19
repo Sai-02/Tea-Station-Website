@@ -248,7 +248,7 @@
 @media screen and (min-width: 768px) {
   .product {
     float: left;
-    width: 50%;
+    width: 40%;
     padding: 2rem 1rem;
   }
 
@@ -259,7 +259,7 @@
 
 @media screen and (min-width: 992px) {
   .product {
-    width: 33.3%;
+    width: 25%;
   }
 }
 
