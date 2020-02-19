@@ -13,6 +13,13 @@
   --greycolor: rgba(88, 86, 88, 0.5);
   --mainTransition: transition 0.3s ease-in-out;
 }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .main {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("main-bcg.jpeg") no-repeat;
@@ -121,6 +128,10 @@
   );
 }
 
+.skill: {
+  padding-bottom: 40px;
+}
+
 .skill-content {
   padding: 2.5rem 0;
   text-align: center;
@@ -134,5 +145,136 @@
 /*End of skills*/
 
 /*about*/
+.section-center {
+  width: 80vw;
+  margin: 0 auto;
+  max-width: 1170px;
 
+  padding: 4rem 0;
+}
+
+.about-img,
+.about-info {
+  padding: 2rem 0;
+}
+
+.about-picture-container {
+  background: var(--greencolor);
+  border: 0.5rem solid var(--greencolor);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.about-picture {
+  width: 100%;
+  display: block;
+  transition: var(--mainTransition);
+}
+
+.about-picture-container:hover .about-picture {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  font-family: var(--stylishfont);
+  letter-spacing: 4px;
+  text-transform: capitalize;
+  color: var(--greencolor);
+}
+
+.section-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.about-text {
+  margin: 1rem 0;
+  max-width: 32rem;
+}
+
+@media screen and (min-width: 1080px) {
+  .about-img,
+  .about-info {
+    float: left;
+    width: 40%;
+    padding: 2rem;
+  }
+}
 /*End of about*/
+
+/*Product section*/
+
+.products {
+  background: rgba(88, 86, 88, 0.5);
+}
+
+.product-info,
+.products-inventory {
+  padding: 2rem 0;
+}
+
+.product-text {
+  color: white;
+  max-width: 26rem;
+  margin: 1rem 0;
+}
+
+.product-img {
+  width: 100%;
+  display: block;
+  border-radius: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.products {
+  padding: 2rem 0;
+}
+
+.product-title {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  color: var(--greencolor);
+  letter-spacing: 4px;
+  font-family: var(--stylishfont);
+}
+
+@media screen and (min-width: 768px) {
+  .product {
+    float: left;
+    width: 50%;
+    padding: 2rem 1rem;
+  }
+
+  .product-info {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .product {
+    width: 33.3%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product-info {
+    width: 30%;
+    float: left;
+  }
+
+  .product-inventory {
+    float: left;
+    width: 70%;
+  }
+  .product {
+    padding: 1.5rem 1rem 0 1rem;
+  }
+}
+/*End of Product*/
