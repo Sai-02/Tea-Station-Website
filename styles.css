@@ -70,6 +70,31 @@
   color: var(--primarycolor);
   opacity: 0.7;
 }
+/*navbar*/
+.nav-button {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  color: var(--greencolor);
+  margin: 1rem 1.5rem;
+  font-size: 2rem;
+  animation: bounce 2s ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 /*Check some error in  animation*/
 @keyframes show {
   0% {
@@ -322,44 +347,38 @@
 }
 
 /*Some mistake in this media query*/
-@media screen and (min-width:1080px){
-  .contact-info,.contact-form{
-    float:left;
-    width:50%;
-    padding:0 1rem;
-
+@media screen and (min-width: 1080px) {
+  .contact-info,
+  .contact-form {
+    float: left;
+    width: 50%;
+    padding: 0 1rem;
   }
-  
 }
 /* End of contact */
 
 /*footer*/
 
-.footer{
-
+.footer {
   background: var(--greycolor);
-  text-align:center;
+  text-align: center;
 }
 
-.social-icon{
-
-  color:white;
-  font-size:1.3 rem;
-  margin-right: 1rem;trasition:var(--mainTransition);
-
+.social-icon {
+  color: white;
+  font-size: 1.3 rem;
+  margin-right: 1rem;
+  trasition: var(--mainTransition);
 }
 
-.social-icon:hover{
-  color:var(--greencolor);
-
+.social-icon:hover {
+  color: var(--greencolor);
 }
 
-
-.footer-text{
-
-  text-transform:uppercase;
-  color:white;
-  letter-spacing:4px;
-  margin-top:1rem;
-  font-size:0.85rem;
+.footer-text {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 4px;
+  margin-top: 1rem;
+  font-size: 0.85rem;
 }
