@@ -1,3 +1,4 @@
+
 /*Some fix to be done on skills css*/
 
 @import url("https://fonts.googleapis.com/css?family=Lato|Pacifico|Zhi+Mang+Xing&display=swap");
@@ -110,7 +111,11 @@
   margin-left: 0;
   text-align: left;
   transition: var(--mainTransition);
-  /*transform*/
+  transform: translateX(-100%);
+}
+
+.showNav {
+  transform: translateX(0);
 }
 
 .nav-close {
@@ -132,6 +137,13 @@
 .nav-link:hover {
   color: black;
   padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    width: 30vw;
+    max-width: 20rem;
+  }
 }
 /*Check some error in  animation*/
 @keyframes show {
