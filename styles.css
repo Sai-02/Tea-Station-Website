@@ -1,6 +1,3 @@
-
-/*Some fix to be done on skills css*/
-
 @import url("https://fonts.googleapis.com/css?family=Lato|Pacifico|Zhi+Mang+Xing&display=swap");
 
 * {
@@ -104,7 +101,7 @@
   right: 0;
   bottom: 0;
   z-index: 2;
-  background: var(--greycolor);
+  background: rgba(200, 234, 234, 1);
   padding-top: 1rem;
   padding-bottom: 2rem;
   float: left;
@@ -204,11 +201,64 @@
     rgba(230, 45, 23)
   );
 }
-
-.skill: {
-  padding-bottom: 40px;
+/*skills*/
+.skills {
+  background: var(--greycolor);
+}
+.skill {
+  padding: 2.5 rem 0;
+  text-align: center;
+  transition: var(--mainTransition);
 }
 
+.skill-icon {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  transition: var(--mainTransition);
+  display: inline-block;
+}
+
+.skill-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+  color: var(--greencolor);
+}
+
+.skill-text {
+  max-width: 13rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+.skill:hover {
+  background: var(--greencolor);
+}
+
+.skill:hover .skill-title {
+  color: white;
+}
+
+.skill:hover .skill-icon {
+  transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skill {
+    float: left;
+    width: 25%;
+    background: var(--greycolor);
+  }
+}
 .skill-content {
   padding: 2.5rem 0;
   text-align: center;
@@ -432,3 +482,4 @@
   margin-top: 1rem;
   font-size: 0.85rem;
 }
+
